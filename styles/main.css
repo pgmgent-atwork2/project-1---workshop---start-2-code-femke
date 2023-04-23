@@ -1,0 +1,175 @@
+/** Background and centering playfield **/
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #87a2be;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+
+  /*center the playfield*/
+  align-items: center;
+  justify-content: center;
+}
+
+/** Title **/
+h1 {
+  color: #FFF;
+  background-color: #ffc9b5e1;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  z-index: 1;
+  font-family: "Copperplate";
+  letter-spacing: 0.4rem;
+  font-size: 3rem;
+}
+
+/** Player indications **/
+.player {
+  /*positioning*/
+  position: absolute;
+  top: 48%;
+
+  /*styling*/
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFF;
+  font-family: "Segoe Script", cursive;
+}
+
+.player--x {
+  left: 10%
+}
+
+.player--o {
+  right: 10%
+}
+
+.active {
+  background-color: #ffc9b5e1;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+
+/** Gameboard **/
+.gameboard {
+  background-color: #9A7AA0;
+  height: 100%;
+  aspect-ratio: 1/1;
+
+  /*styling*/
+  box-shadow: 0px 0px 100px 30px rgba(154,122,160,1);
+  border-radius: 2rem;
+  font-family: "Helvetica", sans-serif;
+
+  /*grid*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem
+  
+}
+
+/** boxes **/
+.box {
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover {
+  cursor: pointer;
+  background-color: #fae1d8;
+}
+
+#zero {
+  border-top-left-radius: 2rem;
+}
+#two {
+  border-top-right-radius: 2rem;
+}
+#six {
+  border-bottom-left-radius: 2rem;
+}
+#eight {
+  border-bottom-right-radius: 2rem;
+}
+
+/** Input (x's and o's) **/
+.input {
+  font-size: 5rem;
+  color: #9A7AA0
+}
+
+/** Reset button **/
+.resetBtn{
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  background-color: #FFC9B5   ;
+  color: #79647d;
+  border: #79647d solid 0.1rem ;
+  font-family: "Helvetica", sans-serif;
+}
+
+/** Winning screen **/
+.hidden {
+  left: -100rem;
+}
+
+.winning-screen {
+  /*styling*/
+  background-color: #ffc9b5d2;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-family: "Helvetica", sans-serif;
+  width: 27rem;
+  height: 12rem;
+
+  /*positioning*/
+  position: absolute;
+  margin: auto;
+  z-index: 3;
+
+  /*positioning of content*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.winning-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #79647d;
+  font-family: "Segoe Script", cursive;
+}
+
+.replayBtn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #79647d;
+  border: #79647d solid 0.1rem ;
+}
+
+.closeBtn {
+  background-color: #79647d00;
+  border: none;
+  font-size: 2rem;
+  font-family: "Segoe Script", cursive;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  color: #79647d;
+}
+
+.btn:hover {
+  cursor: pointer;
+}

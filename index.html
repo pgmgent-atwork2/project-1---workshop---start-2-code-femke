@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OXO</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <h1>OXO</h1>
+    <p class="player player--x" id="x">Player X</p>
+    <div class="gameboard">
+      <div class="box" id="zero" data-id="0"></div>
+      <div class="box" id="one" data-id="1"></div>
+      <div class="box" id="two" data-id="2"></div>
+      <div class="box" id="three" data-id="3"></div>
+      <div class="box" id="four" data-id="4"></div>
+      <div class="box" id="five" data-id="5"></div>
+      <div class="box" id="six" data-id="6"></div>
+      <div class="box" id="seven" data-id="7"></div>
+      <div class="box" id="eight" data-id="8"></div>
+    </div>
+    <p class="player player--o" id="o">Player O</p>
+  <button class="btn resetBtn" id="resetBtn">Reset</button>
+
+  <div class="winning-screen hidden" id="winning-screen">
+    <div class="winning-text" id="winning-text"></div>
+    <button class="btn replayBtn" id="replayBtn">Play again</button>
+    <button class="btn closeBtn" id="closeBtn">x</button>
+  </div>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
