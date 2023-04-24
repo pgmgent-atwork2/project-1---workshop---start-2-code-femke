@@ -1,0 +1,100 @@
+/** GENERAL **/
+
+body {
+  background-color: #fed5c67e;
+  font-family: "Helvetica", sans-serif;
+}
+
+header {
+  background-color: #87a2bef0;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-family: "Copperplate";
+}
+
+main {
+  max-width: 55rem;
+  margin: auto;
+  padding: 3rem 5rem;
+}
+
+p {
+  color: #242424;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  margin: 0.5rem 0;
+  border-radius: 0.3rem;
+}
+
+a {
+  color: #4380c1
+}
+
+iframe {
+  margin: 1rem auto;
+}
+
+.main-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.main-list li h2::before {
+  counter-increment: step;
+  content: "Step " counter(step) ": ";
+}
+
+
+/** FYI **/
+.fyi {
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #a2b2c3;
+  border-radius: 1rem;
+}
+
+.fyi-title {
+  font-family: "Monaco", monospace;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/** Proficiat **/
+.congrats {
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 3rem;
+  font-family: "Segoe Script", cursive;
+}
+
+/** ACCENTEN **/
+.accent {
+  font-weight: 600;
+  text-align: center;
+  font-family: "Monaco", monospace;
+  margin-bottom: 2rem;
+}
+
+.accent2 {
+  background-color: #ffffffa3;
+  padding: 0.5rem;
+  width: 95%;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+}
+
+.italic {
+  font-style: italic;
+}

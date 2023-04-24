@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OXO | Start to code</title>
+
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header> <h1>Start to code - OXO game</h1></header>
+  <main>
+    <p class="accent">
+      Tijd om te bewijzen dat iedereen kan coderen, ook jij! <br>
+      Aan de hand van deze tutorial maken we een eenvoudig OXO-spel dat je zelf kan ontwerpen!
+    </p>
+    <img src="assets/img/Screenshot1.png" alt="Voorbeeld eindresultaat">
+    <p>We zullen dit maken met behulp van drie programmeertalen:
+      <ul>
+        <li>
+          <p><strong>HTML</strong>: Structuur</p>
+        </li>
+        <li>
+          <p><strong>CSS</strong>: Styling</p>
+        </li>
+        <li>
+          <p><strong>JavaScript</strong>: Interactiveit</p>
+        </li>
+      </ul>
+    </p>
+
+    <ol class="main-list">
+      <li>
+        <h2>Getting Ready</h2>
+        <p>Voordat we kunnen programmeren, hebben we een <strong>code-editor</strong> nodig. Wij zullen gebruik maken van <a href="https://code.visualstudio.com/Download">Visual Studio Code</a></p>
+        <ol>
+          <li>
+            <p>Download <a href="https://code.visualstudio.com/Download">Visual Studio Code</a></p>
+          </li>
+          <li>
+            <p>Maak een map aan op een locatie naar keuze. Bijvoorbeeld: een map "Start-to-code" op je bureaublad</p>
+          </li>
+          <li>
+            <p>Open de gemaakte folder in VSCode</p>
+            <img src="assets/img/Screenshot2.png" alt="Open folder in VSCode">
+          </li>
+          <li>
+            <p>Maak volgende <strong>mappenstructuur</strong> na:</p>
+            <img src="assets/img/Screenshot3.PNG" alt="Mappenstructuur">
+            <div class="fyi">
+              <p class="fyi-title">FYI:</p>
+              <p class="fyi-text"> 
+                Een webbrowser zal binnen een map altijd op zoek gaan naar het bestand met de naam <code>index.html</code>. Dit bestand moet dus altijd bestaan, en zal als eerste geopend worden.
+              </p>
+            </div>
+          </li>
+          <li>
+            <p><span class="italic">Optioneel</span>: Installeer de <strong>Live Server</strong> extensie in Visual Studio Code. Met deze extensie zal je webpagina automatisch herladen telkens je je bestand opslaat</p>
+            <img src="assets/img/Screenshot4.PNG" alt="Live Server">
+          </li>
+        </ol>
+        <p>Zie zo, nu staat alles klaar om aan het echte werk te beginnen.</p>
+      </li>
+      <li>
+        <h2>HTML</h2>
+        <p>Voor we onze pagina kunnen opmaken of interactiveit kunnen toevoegen, hebben we <strong>structuur</strong> nodig. Deze structuur maken we in HTML.</p>
+        <p>In HTML maken we gebruik van <strong><code>&lttags></code></strong> die de structuur bepalen. Alles wat we binnen deze <code>&lttags></code> schrijven, zal op de pagina verschijnen.</p>
+        <ol>
+          <li>
+            <p>We beginnen met de <strong>basistructuur</strong>. Je kan deze hieronder kopieren <span class="italic">of</span> je kan zoals echte programmeurs gebruik maken van de <strong>sneltoets</strong>:</p>
+            <p class="accent2">Ga naar je <code>index.html</code> bestand. Type een <kbd>!</kbd> en druk vervolgens op <kbd>tab</kbd>. Tada!</p>
+            <p>Pas de titel gerust aan!</p>
+            <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/2/embedded/html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <div class="fyi">
+              <p class="fyi-title">FYI:</p>
+              <p class="fyi-text"> 
+                De <code>&lttitle></code> zal de naam van je tablad zijn in de webbrowser.
+              </p>
+            </div>
+          </li>
+          <li>
+            <p>Alle inhoud die op de pagina moet verschijnen zullen we tussen de <code>&ltbody></code>-tags plaatsen</p>
+            <p>We voorzien onze pagina van een <strong>titel <code>&lth1></code></strong> en de <strong>structuur van het gamebord</strong>. Dit zal bestaan uit negen vakjes.</p>
+            <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/36/embedded/html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>            
+            <div class="fyi"> 
+              <p class="fyi-title">FYI:</p> 
+              <p class="fyi-text">
+                We kunnen aan elke tag ook een <code>class</code>, <code>id</code> en/of <code>data</code> meegeven. Deze elementen kunnen we later gebruiken om specifieke segmenten te identificeren.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <h2>CSS</h2>
+        <p>Momenteel zien we op onze pagina nog niet veel verschijnen. Het speelveld is al aanwezig, maar het heeft nog niet de vorm die we wensen. We gebruiken css om de inhoud van onze pagina <strong>op te maken</strong>.</p>
+        <ol>
+        <li>
+          <p>Laten we eerst <strong>experimenteren</strong> door de achtergrond van kleur te veranderen.
+          In je <code>main.css</code> bestand, typ of kopieer onderstaande en kies je favoriete achtergrondkleur</p>
+          <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/14/embedded/css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+          <div class="fyi">
+            <p class="fyi-title"> FYI:</p> 
+            <p>
+              Hoewel er enkele kleurnamen ter beschikking worden gesteld, gebruiken programmeurs meestal hex-, rgb-, of hsl-kleurcodes
+            </p>
+          </div>
+          <p><strong>Open je pagina in de browser.</strong> Als je de Live Server-extensie gedownload hebt, kan je kiezen voor "Open with Live Server". Zo niet, kies voor "Open with Default Browser". De webpagina zou nu gevuld moeten zijn met je kleur naar keuze.</p>
+          <img src="assets/img/Screenshot6.png" alt="Open webpagina in browser">
+        </li>
+        <li>
+          <p>Oké, dan gaan we verd-... Hoe bedoel je het werkt niet...? Aha, gefopt!</p>
+          <p>Dat is heel normaal dat dat nog niet werkt, we moeten namelijk nog tegen onze HTML code zeggen dat hij de styling uit <code>main.css</code> moet gebruiken.</p>
+          <p>Dat doen we door onderstaande <strong><code>&ltlink></code></strong> toe te voegen binnen onze <code>&lthead></code>-tags</p>
+          <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/16/embedded/html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+          <p>Nu zou het wél moeten werken. Geen mopjes meer!</p>
+        </li>
+        <li>
+          <p>Nu dat we weten dat onze <code>index.html</code> en <code>main.css</code> succesvol gelinkt zijn, kunnen we overgaan tot het echte werk. <strong>Kopieer</strong> onderstaande code in je <code>main.css</code> bestand en sla op. <strong>Experimenteer</strong> gerust met alle elementen onder <strong>/*styling*/</strong>!</p>
+          <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/72/embedded/css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+          <div class="fyi">
+            <p class="fyi-title">FYI:</p>
+            <p class="fyi-text"> 
+              Als je commentaar wil schrijven in je CSS of JavaScript bestand, laat je de tekst vooraf gaan met <code>//</code> <span class="italic">of</span> door je commentaar te omsluiten met <code>/* */</code>. Alle tekst die hierachter/hiertussen staat zal genegeerd worden.
+            </p>
+          </div>
+        </li>
+      </ol>
+      </li>
+      <li>
+        <h2>JavaScript</h2>
+        <p>Nu hebben we een pagina met spelbord, maar we kunnen nog niet spelen. Als we de spelvelden aanklikken, gebeurt er niets. Om deze functionaliteiten toe te voegen, zullen we JavaScript gebruiken</p>
+        <ol>
+          <li>
+            <p>Ook nu moeten we ons HTML- en JavaScript-bestand linken. <strong>Kopieer</strong> de <code>&ltscript></code> tag hieronder en plaats deze in <code>index.html</code> vlak voor het sluiten van de <code>&ltbody></code>-tag.</p> 
+            <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/40/embedded/html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+          </li>
+          <li>
+            <p>We<strong> testen</strong> of de pagina's succesvol gelinkt zijn. Kopieer onderstaande in je <code>app.js</code> bestand, sla op, en open je webpagina.</p>
+            <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/20/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <img src="assets/img/Screenshot7.PNG" alt="Test link JavaScript">
+            <p>Nu kunnen we aan het echte werk beginnen.</p>
+          </li>
+          <li>
+            <p>Kopieer volgende <strong>startcode</strong> in je <code>app.js</code> bestand:</p> 
+            <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/62/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <p class="accent2">In JavaScript werken we met <strong>variabelen, arrays, objecten en functies</strong>. Overal waar je <code>const</code> ziet staan, maken we één van deze elementen aan. Van zodra een functie aangemaakt is, kunnen we deze ook oproepen. Bij het oproepen van een functie, zal deze de stappen uitvoeren die je tussen de accolades {} definieert.</p>
+          </li>
+          <li>
+            <p>We starten met te definiëren wat er moet gebeuren als je op één van de vakjes klikt. Dit doen we aan de hand van een <strong>Event Listener</strong>. Deze Event Listener zal in actie schieten <strong>zodra de knop waar deze aan toegewezen is aangeklikt wordt</strong>. De code hieronder kan je kopieren op en plakken in je <code>app.js</code> bestand</p>
+            <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/66/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <div class="fyi">
+              <p class="fyi-title">FYI:</p>
+              <p class="fyi-text"> 
+                String of tekst kan geplaatst worden tussen dubbele <code>""</code> of enkele <code>''</code> aanhalingstekens. Maar hierboven gebruiken we backticks <code>``</code>. Het gebruik van backticks laat toe om variërende waarden in te voegen. Dit doe je door gebruik te maken van <code>${}</code>
+              </p>
+            </div>
+            
+          </li>
+          <li>
+            <p>In deze Event Listener roepen we de functie <strong><code>determineCurrentPlayer()</code></strong> op. Deze doet momenteel nog niets. We definiëren de functie:</p>
+            <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/61/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <div class="fyi">
+              <p class="fyi-title">FYI:</p>
+              <p class="fyi-text"> 
+                Een switch statement is een constructie binnen JavaScript waarbij er nagegaan wordt aan welke waarde een bepaalde variabele gelijk is. Vervolgens worden enkel de instructies uitgevoerd die onder deze waarden gedefinieerd worden.
+              </p>
+            </div>
+          </li>
+          <li>
+            <p>Sla alles eens op, en <strong>open je webpagina</strong>. Je kan nu al beginnen spelen!</p>
+            <p>Jammer genoeg kan je maar één keer spelen. Laat ons dus nog een <strong>reset button</strong> maken:</p>
+            <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/70/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p class="congrats">Proficiat! Het spel is klaar!</p>
+    <p>Je tegenstanders zullen zo versteld staan van het feit dat je dit helemaal zelf gemaakt hebt, dat je hen gemakkelijk zal verslaan!</p>
+    <p>Wil je er nog wat <strong>extra's</strong> bij? Kopieer onderstaande code in de juiste bestanden voor een vlotte werking van het spel.</p>
+    <p class="accent">Of programmeer de extra's zelf. Voor de liefhebbers worden alle extra's stap voor stap uitgelegd.</p>
+    <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/75/embedded/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+    <h2>Uitbreiding</h2>
+    <ol>
+      <li>
+        <p>Laten we de <strong>beginnende speler willekeurig</strong> maken. Voeg onderstaande functie toe en roep deze aan, juist onder <code>// Wie is er aan de beurt?</code></p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/85/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+      </li>
+      <li>
+        <p>Nu kan je niet zien <strong>wie er moet beginnen</strong>? Laten we dat oplossen.</p>
+        <p>Voeg in je <code>index.html</code> tussen de <code>&ltbody></code>-tags volgende elementen toe. De opmaak kan je ook kopieren in je css bestand. Voel je vrij om alles onder <code>/*styling*/</code> aan te passen naar eigen wens.</p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/80/embedded/html,css/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        <p>Nu zullen we telkens aan HTML moeten meegeven wie er aan de beurt is, zodat de opmaak aangepast kan worden. Hiervoor voegen we de <strong><code>"acitve"</code> klasse</strong> toe aan het respectievelijke element.</p>
+        <p>In je <code>app.js</code> bestand: voeg de eerste twee regels toe onder <code>// Cache elements</code> en vervang de <code>selectRandomPlayer()</code> en <code>determineCurrentPlayer()</code> functie.</p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/88/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        <p>Met deze toevoegingen kan je perfect bijhouden wie er aan de beurt is.</p>
+      </li>
+      <li>
+        <p>Laten we, als <strong>kers op de taart</strong>, een <strong>pop-up</strong> maken die zal verschijnen wanneer één van beide spelers wint <span class="italic">of</span> wanneer het game over is.</p>
+        <p>In <code>index.html</code>, voeg onderstaande elementen toe tussen je <code>&ltbody></code>-tags. Dit is de basis van ons pop-up scherm. Kopieer ook de opmaak in <code>main.css</code>.</p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/95/embedded/html,css/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        <p>Je zal het scherm nog niet zien,want we hebben, in HTML, de klasse <code>hidden</code> meegegeven. Die zorgt ervoor dat onze pop-up zich buiten het scherm verstopt, totdat er iemand wint (of het game over is)</p>
+        <p>Nu gaan we, in <code>app.js</code>, een aantal stappen in één keer doen:</p>
+        <ol>
+          <li>
+            <p>We <strong>halen de nodige elementen op</strong> onder <code>// Cache elements</code></p>
+          </li>
+          <li>
+            <p>We updaten onze <strong>Event Listener</strong>, zodat er bij elke zet gecontroleerd wordt of er iemand gewonnen heeft. Vervang de code onder <code>// Maak de vakjes aanklikbaar</code> door onderstaande.</p>
+          </li>
+          <li>
+            <p>In de functie <strong><code>restartGame()</code></strong> mag je volgende regels toevoegen:</p>
+            <p><code>variables.gameOver = false</code><br></p>
+            <p><code>$winningScreen.classList.add("hidden")</code></p>
+          </li>
+          <li> 
+            <p>Als laatste voegen we ook een lijst toe van alle <strong>winnende combinaties</strong>. Deze zullen we later gebruiken.</p> 
+          </li>
+        </ol>
+        <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/108/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        <div class="fyi">
+          <p class="fyi-title">FYI:</p>
+          <p class="fyi-text"> 
+            Een <code>!</code> voor een variabele draait de waarde van deze variabele om. Dus in de code hierboven: als <code>gameOver = false</code>, zal deze waarde omgedraaid worden naar <code>true</code> en wordt de rest van de code tussen {} uitgevoerd. Is <code>gameOver = true</code>, zal de rest van de code niet uitgevoerd worden.
+          </p>
+        </div>        
+        <p>Merk op: we roepen in de Event Listener <strong>drie nieuwe functies</strong> op: <code>checkWin()</code>, <code>announceWinner()</code> en <code>gameOver()</code>. Deze hebben we nog niet gedefinieerd. Kopieer ze hieronder: </p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/106/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        <p>Speel gerust al eens een spelletje! Het pop-up scherm zou moeten verschijnen. In <code>announceWinner()</code> en <code>gameOver()</code> kan je de tekst die verschijnt aanpassen.</p>
+        <p>In ons winscherm staan nog enkele knoppen die niet werken. We voegen enkele Event Listeners toe:</p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/Femke568/qm6Lo7p9/111/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+      </li>
+    </ol>
+    <p class="congrats">Goed gewerkt!!</p>
+    <p class="accent">Ik zei je toch dat je kon programmeren! Kom je nieuwe skills verder ontwikkelen in het <a href="https://www.arteveldehogeschool.be/nl/opleidingen/graduaat/programmeren">Graduaat Programmeren aan Arteveldehogeschool</a>!</p>
+  </main>
+</body>
+</html>

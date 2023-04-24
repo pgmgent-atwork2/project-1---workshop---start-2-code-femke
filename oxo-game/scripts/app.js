@@ -12,6 +12,7 @@ const $closeBtn = document.querySelector('#closeBtn')
 // We will keep track of some variables in an object, as this is available everywhere
 const variables = {
   gameOver: false,
+  currentPlayer: "",
   boardState: [null, null, null, null, null, null, null, null, null]
 }
 
@@ -64,29 +65,25 @@ const determineCurrentPlayer = () => {
   box.innerHTML = "test"
 }) */
 
-const addEventListeners = () => {
-  $boxes.forEach((box) => {
-      box.addEventListener("click", (e) => {
-        if(!variables.gameOver){
-          const id = e.currentTarget.dataset.id;
-          if(variables.boardState[id] === null) {
-            box.innerHTML = `<span class="input">${variables.currentPlayer}</span>`
-            variables.boardState[id] = variables.currentPlayer;
-            if(checkWin()){
-              anounceWinner();
-              variables.gameOver= true
-            };
-            if(variables.boardState.every(element => element !== null)){
-              gameOver()
-            }
-            determineCurrentPlayer()
+$boxes.forEach((box) => {
+    box.addEventListener("click", (e) => {
+      if(!variables.gameOver){
+        const id = e.currentTarget.dataset.id;
+        if(variables.boardState[id] === null) {
+          box.innerHTML = `<span class="input">${variables.currentPlayer}</span>`
+          variables.boardState[id] = variables.currentPlayer;
+          if(checkWin()){
+            announceWinner();
+            variables.gameOver= true
+          };
+          if(variables.boardState.every(element => element !== null)){
+            gameOver()
           }
-        }})
-    }
-  )
-}
-
-addEventListeners()
+          determineCurrentPlayer()
+        }
+      }})
+  }
+)
 
 // Determine winner (inspired by ChatGPT)
 const winningCombinations = [
@@ -106,7 +103,7 @@ const checkWin = () => {
   })
 }
 
-const anounceWinner = () => {
+const announceWinner = () => {
   $winningText.innerHTML = `<span>Congrats Player ${variables.currentPlayer}</span>!`
   $winningScreen.classList.remove("hidden");
 }
